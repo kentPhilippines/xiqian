@@ -1,0 +1,32 @@
+/**
+*  
+*   
+*   
+*/	
+
+package com.how2java.tmall.service;
+
+import com.how2java.tmall.pojo.Product;
+import com.how2java.tmall.pojo.PropertyValue;
+
+import java.util.List;
+
+public interface PropertyValueService {
+    void init(Product p);
+    void update(PropertyValue pv);
+
+    PropertyValue get(int ptid, int pid);
+    List<PropertyValue> list(int pid);
+    
+    /**
+     * 根据产品唯一识别id删除产品对应的属性
+     * @param id
+     */
+	void delete(int id);
+}
+
+/**
+*  
+*   
+*   
+*/	

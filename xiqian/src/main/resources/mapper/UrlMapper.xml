@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.how2java.tmall.mapper.UrlMapper">
+<select id="findUrl" parameterType="String" resultType="String">
+	SELECT URL FROM payurl WHERE 
+	1+1 
+	<if test="version">and 	VERSION = #{version} </if>
+	<if test="version">and 	CMD = #{cmd} </if>
+	<if test="version">and 	APPID = #{appId} </if>
+</select>
+</mapper>
